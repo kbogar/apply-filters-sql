@@ -29,3 +29,14 @@ The following code demonstrates how I created a SQL query to filter for login at
 ![](/docs/sql3.png)
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred in countries other than Mexico. First, I started by selecting all data from the **log_in_attempts** table. Then, I used a **WHERE** clause with **NOT** to filter for countries other than Mexico. I used **LIKE** with **MEX%** as the pattern to match because the dataset represents Mexico as **MEX** and **MEXICO**. The percentage sign **(%)** represents any number of unspecified characters when used with **LIKE**.
+
+## Retrieve employees in Marketing
+My team wants to update the computers for certain employees in the marketing department. To do this, I have to get information on which employee machines to update.
+
+The following code demonstrates how I created a SQL query to filter for employee machines from employees in the marketing department in the East building.
+
+![](/docs/sql4.png)
+
+My query is in the screenshot, followed by some output. This query returns all employees in the marketing department in the East building. 
+
+First, I started by selecting all data from the **employees** table. Then, I used a **WHERE** clause with **AND** to filter for employees who work in the marketing department and in the East building. I used **LIKE** with **East%** as the pattern to match because the data in the **office** column represents the East building with the specific office number. The first condition is the **department = 'Marketing'** portion, which filters for employees in the Marketing department. The second condition is the **office LIKE 'East%'** portion, which filters for employees in the East building.
